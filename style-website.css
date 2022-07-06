@@ -10,37 +10,31 @@ a {
   line-height: 1.9em;
 }
 header {
-  background-color: #f4f4f4;
   padding: 20px;
   text-align: center;
   position: fixed;
   width: 100%;
+  max-width: 1300px;
   z-index: 1;
   top: 0;
   left: 0;
-  /*
-    max-width: 100%;
-   /* width: 1200px;
-    margin: 80px auto;
-    padding: 6px 40px;
-    box-sizing: border-box;*/
 }
+  
 header h1 {
   background-color: #f4f4f4;
-  color: rgb(57, 12, 61);
-  border: 2px solid rgb(150, 69, 151);
+  color: #29548d;
+  border: 2px solid #1461c6;
   padding: 6px 12px;
   display: inline-block;
-  border-radius: 26px;
-  /*white-space: nowrap;*/
+  border-radius: 18px;
+  font-size: 2.5em;
 }
-header h1 span {
-  font-size: 1.3em;
-}
+
 .banner {
   position: relative;
 }
 .banner img {
+  width: 100%;
   max-width: 100%;
 }
 .banner .welcome {
@@ -51,14 +45,14 @@ header h1 span {
   line-height: 75px;
 }
 .banner h2 {
-  font-size: 35px;
-  color: rgb(105, 66, 117);
+  font-size: 25px;
+  color: #1461c6;
   padding: 0 40px;
   margin: 80 auto;
 }
 .banner h2 span {
-  font-size: 2em;
-  color: rgb(57, 12, 61);
+  font-size: 1.5em;
+  color: #042b4d;
 }
 nav {
   background-color: #f4f4f4;
@@ -73,28 +67,29 @@ nav ul {
   margin: 0 auto;
 }
 nav li {
-  width: 25%;
+  width: 20%;
   display: inline-block;
   font-size: 16px;
 }
 nav li a {
   text-decoration: none;
-  color: rgb(105, 66, 117);
+  color: #1461c6;
 }
 main {
   max-width: 100%;
   width: 1200px;
   margin: 80px auto;
-  padding: 0 40px;
+  padding: 70px;
   box-sizing: border-box;
+   background-color: #f4f4f4;
 }
 article h2 {
   color: #f63232;
   font-size: 30px;
 }
 article p {
-  line-height: 1.5em;
-  color: rgb(105, 66, 117);
+  line-height: 1.9em;
+  color: #1461c6;
 }
 .images {
   text-align: center;
@@ -109,10 +104,9 @@ article p {
 .images li img {
   max-width: 100%;
 }
+
 #showcase {
   line-height: 40px;
-}
-#showcase {
   background-image: url("img/backgg.jpg");
   background-position: bottom left;
   background-repeat: no-repeat;
@@ -120,10 +114,9 @@ article p {
   margin-bottom: 20px;
   text-align: left;
   padding: 25px;
-}
-#showcase {
   padding-top: 40px;
 }
+
 .container {
   width: 100%;
   margin: auto;
@@ -134,15 +127,16 @@ article p {
   width: 70%;
   padding: 0 30px;
   box-sizing: border-box;
-  color: rgb(105, 66, 117);
+  color: #1461c6;
 }
 .sidebar {
   float: right;
   width: 30%;
-  background: rgb(57, 12, 61);
+  background: #042b4d;
   color: white;
   padding: 20px;
   box-sizing: border-box;
+  border-radius: 3px;
 }
 #Article {
   color: #f63232;
@@ -151,22 +145,22 @@ article p {
   background-color: #f4f4f4;
   text-align: center;
   padding: 60px 20px;
-  color: rgb(105, 66, 117);
+  color: #1461c6;
   float: center;
 }
 #join h2 {
   font-size: 36px;
-  color: rgb(57, 12, 61);
+  color: #29548d;
 }
 form input {
   margin: 20px 0;
   padding: 10px 20px;
   font-size: 24px;
-  border-radius: 21px;
-  border: 2px solid rgb(105, 66, 117);
+  border-radius: 13px;
+  border: 2px solid #f63232;
 }
 footer {
-  background-color: #f63232;
+  background-color: #042b4d;
   color: white;
   padding: 10px;
   text-align: center;
@@ -180,11 +174,12 @@ nav li a:hover {
   top: -4px;
 }
 form input:focus {
-  border: 4px dashed #4b4b4b;
+  border: 2px solid #1461c6;
   outline: none;
 }
 form input:valid {
-  border: 4px solid #67e7b6;
+  border: 2px solid #f63232;
+  background-color: #f4f4f4;
 }
 p::selection {
   background-color: #f63232;
@@ -193,30 +188,47 @@ p::selection {
 
 @media screen and (max-width: 1400px) {
   .banner .welcome h2 {
-    font-size: 60px;
+    font-size: 44px;
   }
-  nav li {
+   nav li {
     font-size: 18px;
+    margin-right: 30px;
   }
 }
-
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1000px) {
   .banner .welcome h2 {
     font-size: 30px;
   }
+  .banner .welcome {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+  }
+  nav li {
+    width: 20%;
+    display: inline-block;
+    font-size: 16px;
+  }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
+  header {
+    background-color: #f4f4f4;
+    position: relative;
+  }
   .banner .welcome {
     position: relative;
     text-align: center;
     padding: 10px;
   }
-  .banner .welcome br {
-    display: none;
+  nav li {
+    line-height: 8px;
+    display: block;
+    font-size: 16px;
   }
+
   .banner .welcome h2 {
-    font-size: 25px;
+    font-size: 35px;
   }
   .banner .welcome span {
     font-size: 1em;
@@ -236,13 +248,35 @@ p::selection {
   }
 }
 
+@media screen and (max-width: 650px) {
+  header {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    width: 10px;
+  }
+  header h1 {
+    position: absolute;
+    left: 0px;
+    padding: 0px;
+    margin: 40px;
+    width: 1px;
+    border: none;
+    background-color: #dadedf;
+  }
+}
+
 @media screen and (max-width: 560px) {
+  body {
+    background-color: #f4f4f4;
+  }
   nav li {
     font-size: 20px;
     display: block;
     width: 100%;
     margin: 12px 0;
   }
+
   header {
     position: relative;
   }
